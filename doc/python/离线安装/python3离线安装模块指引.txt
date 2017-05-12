@@ -1,0 +1,10 @@
+1、在安装好需要包的机器上查看包信息、生成包列表
+--查看已安装的包
+pip list 
+--按安装需要关系安装包，得到已安装的列表
+pip freeze > pkg.txt
+--根据列表导出安装的包信息
+pip install --download d:/python_pkg/ -r d:/pkg.txt
+--离线机器安装
+将pkg.txt 以及目录移至目标机器上
+pip install --no-index --find-links=file://
