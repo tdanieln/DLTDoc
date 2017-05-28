@@ -1,0 +1,24 @@
+JVM启动时参数分为两类，一类为标准的启动项，另一类为非标准启动参数。标准启动参数是指当前版本和未来版本都会支持的参数，非标准参数值是指计划在未来版本变化的参数。
+非标准参数的特点是大写的X开头。
+常用的标准参数：
+-classpath classpath或-cp classpath
+指定classpath路径，jar文件或者zip文件，class path之间使用分号分割。指定该参数时，会覆盖掉其他任何classpath的环境变量
+
+-jar
+执行一个封装在jar文件中的程序。第一个参数不再使用class name而是使用jar文件名来代替。
+
+常用的非标准参数
+-Xms n
+指定了初始的分配的内存大小
+-Xmx n
+指定了最大可分配的内存的大小
+在服务端部署时，-Xms和Xmx一般取相同的值
+-Xmn size 或 -XX:NewSize
+每次新开辟内存的大小
+
+JVM虚拟机参数(1.7及以前)
+Performance Options性能参数
+-XX:MaxPermSize=size 
+最大持久化内存区域大小，用于保存非实例的class内容，默认64M，jar包加载越多，越容易出现java.lang.OutOfMemoryError: PermGen space情况，出现该情况时，调大该参数即可
+
+
