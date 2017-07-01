@@ -1,0 +1,4 @@
+Java? Platform Debugger Architecture (JPDA)
+
+JAVA1.5之后使用-agentlib参数来启动远程Debug
+-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
