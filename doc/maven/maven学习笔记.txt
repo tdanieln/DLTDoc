@@ -1,0 +1,26 @@
+mvn help:system  ——显示系统信息
+mvn clean compile  
+clean：清理输出目录
+compile编译项目主代码
+
+
+快速生成Maven骨架
+maven archetype
+mvn archetype:generate
+
+POM文件详解
+<project>是所有pom.xml的根元素
+<modelVersion> 指定了当前POM模型的版本，只能是4.0.0
+<groupId>、<artifactId>、<version>定义了一个项目的基本坐标，在maven中，jar，pom、war都是基于坐标区分的,
+<groupId>定义了项目属于哪个group，groupId对应项目级别而不是组织级别(必填)
+<artifactId>定义了当前Maven项目在组中的唯一ID，artifactID对应的是模块级别(必填)
+<version>版本信息(必填)
+<name>元素只是声明了一个更友好的名字，并不是必须的
+<packaging>定义了项目的打包方式，默认为jar
+
+依赖管理
+<groupId>、<artifactId>、<version>定义了一个项目的基本坐标
+type:依赖类型，默认为jar，主要用来控制依赖及其对应的classpath（编译classpath，测试classpath，运行classpath），共有三种类型，compile：编译依赖范围，test：测试依赖范围，provided：已提供依赖范围，只运行无效，runtime：运行时依赖，system：系统依赖范围
+scope：依赖范围
+optional：以来是否可选
+
