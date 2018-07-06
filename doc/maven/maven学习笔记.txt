@@ -18,9 +18,14 @@ POM文件详解
 <name>元素只是声明了一个更友好的名字，并不是必须的
 <packaging>定义了项目的打包方式，默认为jar
 
+<repositories>在pom文件中指定远端仓库，<repository>下的节点为<id>与<url>
+
 依赖管理
 <groupId>、<artifactId>、<version>定义了一个项目的基本坐标
 type:依赖类型，默认为jar，主要用来控制依赖及其对应的classpath（编译classpath，测试classpath，运行classpath），共有三种类型，compile：编译依赖范围，test：测试依赖范围，provided：已提供依赖范围，只运行无效，runtime：运行时依赖，system：系统依赖范围
 scope：依赖范围
 optional：以来是否可选
 
+
+
+mvn dependency:copy-dependencies 
